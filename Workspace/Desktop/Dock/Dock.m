@@ -103,7 +103,7 @@
       [self registerForDraggedTypes: pbTypes];
 
       if (style == DockStyleModern)
-	[self setBackColor: [[NSColor grayColor] colorWithAlphaComponent: 0.33]];
+	[self setBackColor: [[NSColor grayColor] colorWithAlphaComponent: 0.25]];
       else
 	[self setBackColor: [NSColor grayColor]];
       

@@ -670,6 +670,18 @@ NSRectFill(NSMakeRect(p.x + 1, p.y, 2, 1)); \
 NSRectFill(NSMakeRect(p.x + 2, p.y + 1, 1, 1)); \
 }
 
+#define DRAWMARKER(c1, c2, c3, p) \
+{ \
+[c1 set]; \
+NSRectFill(NSMakeRect(p.x, p.y, 25, 5)); \
+[c2 set]; \
+NSRectFill(NSMakeRect(p.x + 1, p.y + 4 , 23, 1)); \
+NSRectFill(NSMakeRect(p.x, p.y + 1, 1, 3)); \
+[c3 set]; \
+NSRectFill(NSMakeRect(p.x + 1, p.y, 23, 1)); \
+NSRectFill(NSMakeRect(p.x + 24, p.y + 1, 1, 3)); \
+}
+
 #define DRAWDOTS(c1, c2, p) \
 { \
 int i, x = p.x, y = p.y; \
@@ -732,17 +744,17 @@ x += 6; \
   if (isWsIcon == YES) 
   {
       NSPoint p;
-      p.x = (rect.size.width / 2) - 1;
+      p.x = (rect.size.width / 2) - 12;
       p.y = 2;
-      DRAWDOT([NSColor blackColor], [NSColor whiteColor], p);
+      DRAWMARKER([[NSColor grayColor] colorWithAlphaComponent: 0.5], [[NSColor blackColor] colorWithAlphaComponent: 0.5], [[NSColor whiteColor] colorWithAlphaComponent: 0.5], p);
   }
 
     if (launched)
     {
       NSPoint p;
-      p.x = (rect.size.width / 2) - 1;
+      p.x = (rect.size.width / 2) - 12;
       p.y = 2;
-      DRAWDOT([NSColor blackColor], [NSColor whiteColor], p);
+      DRAWMARKER([[NSColor grayColor] colorWithAlphaComponent: 0.5], [[NSColor blackColor] colorWithAlphaComponent: 0.5], [[NSColor whiteColor] colorWithAlphaComponent: 0.5], p);
     }
     
   }

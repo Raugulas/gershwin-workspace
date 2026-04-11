@@ -865,6 +865,18 @@
   
   [backColor set];
   NSRectFill(rect);
+  /* [[[NSColor blackColor] colorWithAlphaComponent: 0.50] set];
+  NSRectFill(NSMakeRect(NSMinX(rect), NSMinY(rect), NSWidth(rect), 1));
+  NSRectFill(NSMakeRect(NSMaxX(rect), NSMinY(rect), 1, NSHeight(rect)));
+  [[[NSColor blackColor] colorWithAlphaComponent: 0.33] set];
+  NSRectFill(NSMakeRect(NSMinX(rect) + 1, NSMinY(rect) + 1, NSWidth(rect) -2, 1));
+  NSRectFill(NSMakeRect(NSMaxX(rect) - 2, NSMinY(rect) + 1, 1, NSHeight(rect) - 1));
+  [[[NSColor whiteColor] colorWithAlphaComponent: 0.50] set];
+  NSRectFill(NSMakeRect(NSMinX(rect), NSMaxY(rect), NSWidth(rect), 1));
+  NSRectFill(NSMakeRect(NSMinX(rect), NSMinY(rect), 1, NSHeight(rect)));
+  [[[NSColor whiteColor] colorWithAlphaComponent: 0.33] set];
+  NSRectFill(NSMakeRect(NSMinX(rect) + 1, NSMaxY(rect) - 1, NSWidth(rect) - 2, 1));
+  NSRectFill(NSMakeRect(NSMinX(rect) + 1, NSMinY(rect) + 1, 1, NSHeight(rect) - 2)); */
 }
 
 @end
